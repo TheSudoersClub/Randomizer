@@ -1,0 +1,46 @@
+:root {
+  --background-color: white;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+  width: 0px;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+
+body {
+  overflow: hidden;
+  background: var(--background-color);
+}
+
+#spin-wheel-page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+}
+
+#toss-page {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  height: 100vh;
+  width: 100vw;
+  background: gray;
+}

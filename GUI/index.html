@@ -2,37 +2,58 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Randomizer</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Randomizer</title>
 
-    <!-- favicon -->
-    <link rel="shortcut icon" href="assets/favicon/favicon.png" type="image/x-icon">
+  <!-- favicon -->
+  <link rel="shortcut icon" href="assets/favicon/favicon.png" type="image/x-icon">
 
-    <!-- styles -->
-    <link rel="stylesheet" href="styles/style.css">
+  <!-- styles -->
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/spin-wheel.css">
+  <link rel="stylesheet" href="styles/toss.css">
+  <link rel="stylesheet" href="styles/animations.css">
 
-    <!-- scripts -->
-    <script defer src="scripts/spin.js"></script>
+
+  <!-- scripts -->
+  <script defer src="scripts/app.js"></script>
+  <script defer src="scripts/spin-wheel.js"></script>
+  <script defer src="scripts/toss.js"></script>
+
 </head>
 
 <body>
 
-    <!-- spin -->
-    <div class="spin-container">
-        <div id="spin-item-input">
-            <div class="input-item">
-                <label for="item-input">Enter the item: </label>
-                <input type="text" id="item-input" name="item-input">
-            </div>
+  <!-- spin wheel  -->
+  <div id="spin-wheel-page" ontouchstart="p1handleTouchStart(event)" ontouchmove="p1handleTouchMove(event)"
+    ontouchend="p1handleTouchEnd(event)">
 
-            <div class="submit-btn">
-                <button id="spin">Spin</button>
-            </div>
+    <div class="spin-container">
+      <div id="spin-item-input">
+        <div class="input-item">
+          <label for="item-input">Enter the item: </label>
+          <input type="text" id="item-input" name="item-input">
         </div>
-        <div id="spin-items"></div>
+
+        <div class="submit-btn">
+          <button id="spin">Spin</button>
+        </div>
+      </div>
+      <div id="spin-items"></div>
     </div>
+
+  </div>
+
+  <!-- toss  -->
+  <div id="toss-page" ontouchstart="p2handleTouchStart(event)" ontouchmove="p2handleTouchMove(event)"
+    ontouchend="p2handleTouchEnd(event)">
+
+    <!-- todo -->
+
+  </div>
+
 </body>
 
 </html>
