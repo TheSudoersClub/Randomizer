@@ -10,6 +10,11 @@
   <!-- favicon -->
   <link rel="shortcut icon" href="assets/favicon/favicon.png" type="image/x-icon">
 
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
   <!-- styles -->
   <link rel="stylesheet" href="styles/main.css">
   <link rel="stylesheet" href="styles/spin-wheel.css">
@@ -50,7 +55,21 @@
   <div id="toss-page" ontouchstart="p2handleTouchStart(event)" ontouchmove="p2handleTouchMove(event)"
     ontouchend="p2handleTouchEnd(event)">
 
-    <!-- todo -->
+    <div class="toss__container">
+
+      <div class="toss__coin-container">
+        <div class="coin__heads">
+          <img src="assets/images/heads.svg" alt="heads">
+        </div>
+        <div class="coin__tails">
+          <img src="assets/images/tails.svg" alt="tails">
+        </div>
+      </div>
+
+      <div class="toss__button-container">
+        <button id="toss-btn">TOSS</button>
+      </div>
+    </div>
 
   </div>
 
