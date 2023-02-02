@@ -29,7 +29,7 @@ body {
 }
 
 #spin-wheel-page {
-  display: none;
+  /* display: none; */
   position: absolute;
   top: 0;
   left: 0;
@@ -38,10 +38,10 @@ body {
 }
 
 #toss-page {
-  /* display: none; */
+  display: none;
   position: absolute;
   top: 0;
-  left: 0;
+  left: 100%;
   height: 100vh;
   width: 100vw;
 }
