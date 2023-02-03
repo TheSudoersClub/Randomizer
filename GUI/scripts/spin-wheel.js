@@ -164,7 +164,11 @@ function spin(d) {
         pieslice = Math.round(1440 / data.length),
         rng = Math.floor((Math.random() * 1440) + 360);
 
-    rotation = (Math.round(rng / ps) * ps);
+    if ((data.length / 6) % 2 != 0 && (data.length % 6) == 0) {
+        rotation = (Math.round(rng / ps) * ps) + 35;
+    } else {
+        rotation = (Math.round(rng / ps) * ps) + rng;
+    }
 
     picked = Math.round(data.length - (rotation % 360) / ps);
     picked = picked >= data.length ? (picked % data.length) : picked;
@@ -176,7 +180,7 @@ function spin(d) {
     }
     rotation += 90 - Math.round(ps / 2);
     vis.transition()
-        .duration(18000)
+        .duration(1000)
         .attrTween("transform", rotTween)
         .ease('cubic-out')
         .each("end", function () {
