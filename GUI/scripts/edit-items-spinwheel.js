@@ -1,3 +1,8 @@
+document.getElementById('clear-list').addEventListener('click', () => {
+    data = localStorage.clear();
+    renderItemsList();
+});
+
 document.getElementById('item').addEventListener("keypress", async function (e) {
     if (e.key === "Enter") {
         const item = document.getElementById('item').value;
@@ -9,6 +14,7 @@ document.getElementById('item').addEventListener("keypress", async function (e) 
                 "label": item
             }
 
+            data = localStorage.getItem('Items') ? JSON.parse(localStorage.getItem('Items')) : [];
             if (data.some(item => JSON.stringify(item) === JSON.stringify(target))) {
                 console.log('item already added');
             } else {

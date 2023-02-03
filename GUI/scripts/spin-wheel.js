@@ -94,10 +94,10 @@ async function renderSpinWheel() {
                 } else if (i % 2 == 0) {
                     return "rgb(240 240 240)"
                 } else {
-                    return "rgb(70 70 70)"
+                    return "rgb(100 100 100)"
                 }
             } else {
-                return i % 2 == 0 ? "rgb(70 70 70)" : "rgb(220 220 220)";
+                return i % 2 == 0 ? "rgb(100 100 100)" : "rgb(220 220 220)";
             }
         })
         .attr("d", function (d) {
@@ -117,6 +117,7 @@ async function renderSpinWheel() {
         })
         .style({
             "font-weight": "700",
+            "fill": "rgb(0, 0, 0)"
         })
 
     //draw spin circle
@@ -159,12 +160,6 @@ function rotTween(to) {
 }
 
 function spin(d) {
-
-    // //all slices have been seen, all done
-    // if (oldpick.length == data.length) {
-    //     console.log("All items have been seen");
-    //     return;
-    // }
     var ps = 360 / data.length,
         pieslice = Math.round(1440 / data.length),
         rng = Math.floor((Math.random() * 1440) + 360);
@@ -181,8 +176,9 @@ function spin(d) {
     }
     rotation += 90 - Math.round(ps / 2);
     vis.transition()
-        .duration(3000)
+        .duration(18000)
         .attrTween("transform", rotTween)
+        .ease('cubic-out')
         .each("end", function () {
             //mark question as seen
             d3.select(".slice:nth-child(" + (picked + 1) + ") path")
@@ -193,8 +189,5 @@ function spin(d) {
 
             /* Get the result value from object "data" */
             console.log(data[picked].value)
-
-            /* Comment the below line for restrict spin to sngle time */
-            container.on("click", spin);
         });
 }
