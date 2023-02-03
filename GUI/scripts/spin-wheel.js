@@ -172,15 +172,10 @@ function spin(d) {
 
     picked = Math.round(data.length - (rotation % 360) / ps);
     picked = picked >= data.length ? (picked % data.length) : picked;
-    if (oldpick.indexOf(picked) !== -1) {
-        d3.select(this).call(spin);
-        return;
-    } else {
-        oldpick.push(picked);
-    }
+    oldpick.push(picked);
     rotation += 90 - Math.round(ps / 2);
     vis.transition()
-        .duration(1000)
+        .duration(3000)
         .attrTween("transform", rotTween)
         .ease('cubic-out')
         .each("end", function () {
