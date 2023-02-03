@@ -25,7 +25,9 @@
   <!-- scripts -->
   <script defer src="scripts/app.js"></script>
   <script defer src="scripts/spin-wheel.js"></script>
+  <script defer src="scripts/edit-items-spinwheel.js"></script>
   <script defer src="scripts/toss.js"></script>
+  <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 
 </head>
 
@@ -35,18 +37,36 @@
   <div id="spin-wheel-page" ontouchstart="p1handleTouchStart(event)" ontouchmove="p1handleTouchMove(event)"
     ontouchend="p1handleTouchEnd(event)">
 
-    <div class="spin-container">
-      <div id="spin-item-input">
-        <div class="input-item">
-          <label for="item-input">Enter the item: </label>
-          <input type="text" id="item-input" name="item-input">
-        </div>
 
-        <div class="submit-btn">
-          <button id="spin">Spin</button>
+    <div id="spin-container">
+      <div id="chart"></div>
+
+      <div class="spin-controller">
+        <div class="btn-container">
+          <button id="spin-btn">SPIN</button>
+        </div>
+        <div class="btn-container">
+          <button id="edit-btn">Edit</button>
         </div>
       </div>
-      <div id="spin-items"></div>
+    </div>
+
+    <div id="editItems-container">
+      <div>
+        <div id="current-items"> </div>
+        <div>
+          <div id="add-item-btn">
+            <button id="add-btn">+</button>
+          </div>
+
+          <div id="addItem">
+            <label for="item">Item:</label>
+            <input type="text" id="item" name="item">
+          </div>
+
+          <button id="done">done</button>
+        </div>
+      </div>
     </div>
 
   </div>
