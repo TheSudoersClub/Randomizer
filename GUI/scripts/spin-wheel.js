@@ -1,4 +1,8 @@
 let data = localStorage.getItem("Items");
+if (!data) {
+    data = '[{"label":"Item1"},{"label":"Item2"},{"label":"Item3"},{"label":"Item4"},{"label":"Item5"}]';
+    localStorage.setItem("Items", data);
+}
 data = JSON.parse(data);
 
 window.addEventListener('load', () => {
