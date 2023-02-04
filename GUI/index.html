@@ -39,27 +39,32 @@
 
 
     <div id="spin-container">
-      <div id="chart"></div>
+      <div class="wheel-container">
+        <div id="chart"></div>
+        <div class="edit-btn-container">
+          <button id="edit-btn"><img src="assets/icons/edit-icon.svg" alt="Edit"></button>
+        </div>
+      </div>
 
       <div class="spin-controller">
         <div class="btn-container">
           <button id="spin-btn">SPIN</button>
         </div>
-        <div class="btn-container">
-          <button id="edit-btn">Edit</button>
-        </div>
       </div>
     </div>
 
     <div id="editItems-container">
-      <div id="clear-items-btn">
-        <button id="clear-list">Clear</button>
+      <div class="save-btn-container">
+        <button id="done">Save</button>
       </div>
+      <!-- <div id="clear-items-btn">
+        <button id="clear-list">Clear</button>
+      </div> -->
       <div>
         <div id="current-items"> </div>
         <div>
           <div id="add-item-btn">
-            <button id="add-btn">+</button>
+            <button id="add-btn"><img src="assets/icons/add-icon.svg" alt="Add"></button>
           </div>
 
           <div id="addItem">
@@ -67,7 +72,6 @@
             <input type="text" id="item" name="item">
           </div>
 
-          <button id="done">done</button>
         </div>
       </div>
     </div>

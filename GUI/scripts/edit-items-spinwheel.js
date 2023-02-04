@@ -1,7 +1,7 @@
-document.getElementById('clear-list').addEventListener('click', () => {
-    data = localStorage.clear();
-    renderItemsList();
-});
+// document.getElementById('clear-list').addEventListener('click', () => {
+//     data = localStorage.clear();
+//     renderItemsList();
+// });
 
 document.getElementById('item').addEventListener("keypress", async function (e) {
     if (e.key === "Enter") {

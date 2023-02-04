@@ -52,6 +52,8 @@
   outline: none;
   transition: 3s;
   user-select: none;
+
+  transform: translateY(4.6rem);
 }
 
 #toss-btn:active {
