@@ -69,7 +69,7 @@ async function renderSpinWheel() {
         .attr("class", "chartholder")
         .attr("transform", "translate(" + (w / 2 + padding.left) + "," + (h / 2 + padding.top) + ")")
         .style({
-            "transform": "translate(175px,175px)",
+            "transform": "translate(170px,175px)",
             "box-shadow": "1px 1px 20px black",
         })
 
