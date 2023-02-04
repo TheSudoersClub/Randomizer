@@ -5,8 +5,6 @@
 
 document.getElementById('item').addEventListener("keypress", async function (e) {
     if (e.key === "Enter") {
-        document.querySelector('#editItems-container').style.filter = 'none';
-        document.querySelector('#addItem').style.display = 'none';
         let item = document.getElementById('item').value;
         item = item.trimStart();
         item = item.trimEnd();
@@ -35,7 +33,6 @@ document.getElementById('item').addEventListener("keypress", async function (e) 
 
 document.getElementById('add-btn').addEventListener('click', () => {
     const editItemsContainer = document.getElementById('addItem')
-    document.querySelector('#editItems-container').style.filter = 'blur(5px)';
     editItemsContainer.style.display = `flex`;
 
 })

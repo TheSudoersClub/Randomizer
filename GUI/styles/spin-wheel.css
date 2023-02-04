@@ -22,7 +22,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: 0.3s;
 }
 
 .container {
@@ -98,18 +97,6 @@ circle::before {
 }
 
 #addItem {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
   display: none;
 }
 
@@ -140,17 +127,17 @@ circle::before {
   width: 50px;
 }
 
-.edit-btn-container {
-  /* background: red; */
-  /* width: 70%;
+.edit-btn-container{
+    /* background: red; */
+    /* width: 70%;
     display: flex;
     justify-content: flex-end; */
 
-  transform: translateY(-0.5rem);
+    transform: translateY(-0.5rem);
 }
 
-.spin-controller {
-  transform: translateY(2rem);
+.spin-controller{
+    transform: translateY(2rem);
 }
 
 .spin-controller #spin-btn {
@@ -217,6 +204,7 @@ circle::before {
     width: 12rem;
   }
 }
+
 
 #current-items div .remove-btn-div {
   display: inline-block;
