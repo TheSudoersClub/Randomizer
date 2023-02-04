@@ -9,6 +9,7 @@ function p1handleTouchStart(e) {
 };
 
 function p1handleTouchMove(e) {
+    e.preventDefault();
     let touch = e.touches[0];
     let coordinateChange = initX - touch.clientX;
     if (coordinateChange < 0) {
@@ -43,6 +44,7 @@ function p2handleTouchStart(e) {
 };
 
 function p2handleTouchMove(e) {
+    e.preventDefault();
     let touch = e.touches[0];
     let coordinateChange = touch.clientX - initX;
     if (coordinateChange < 0) {

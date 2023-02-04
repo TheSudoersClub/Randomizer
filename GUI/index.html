@@ -37,28 +37,27 @@
   <div id="spin-wheel-page" ontouchstart="p1handleTouchStart(event)" ontouchmove="p1handleTouchMove(event)"
     ontouchend="p1handleTouchEnd(event)">
 
-    <div>
 
-      <div id="spin-container">
-        <div class="wheel-container">
-          <div id="chart"></div>
-          <div class="edit-btn-container">
-            <button id="edit-btn"><img src="assets/icons/edit-icon.svg" alt="Edit"></button>
-          </div>
-        </div>
-
-        <div class="spin-controller">
-          <div class="btn-container">
-            <button id="spin-btn">SPIN</button>
-          </div>
+    <div id="spin-container">
+      <div class="wheel-container">
+        <div id="chart"></div>
+        <div class="edit-btn-container">
+          <button id="edit-btn"><img src="assets/icons/edit-icon.svg" alt="Edit"></button>
         </div>
       </div>
 
-      <div id="editItems-container">
-        <div class="save-btn-container">
-          <button id="done">Save</button>
+      <div class="spin-controller">
+        <div class="btn-container">
+          <button id="spin-btn">SPIN</button>
         </div>
-        <!-- <div id="clear-items-btn">
+      </div>
+    </div>
+
+    <div id="editItems-container">
+      <div class="save-btn-container">
+        <button id="done">Save</button>
+      </div>
+      <!-- <div id="clear-items-btn">
         <button id="clear-list">Clear</button>
       </div> -->
       <div>
@@ -67,6 +66,12 @@
           <div id="add-item-btn">
             <button id="add-btn"><img src="assets/icons/add-icon.svg" alt="Add"></button>
           </div>
+
+          <div id="addItem">
+            <label for="item">Item:</label>
+            <input type="text" id="item" name="item">
+          </div>
+
         </div>
       </div>
     </div>
