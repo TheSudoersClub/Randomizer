@@ -5,6 +5,8 @@
 
 document.getElementById('item').addEventListener("keypress", async function (e) {
     if (e.key === "Enter") {
+        document.querySelector('#editItems-container').style.filter = 'none'
+        document.querySelector('#add-item-wrapper').style.display = 'none';
         let item = document.getElementById('item').value;
         item = item.trimStart();
         item = item.trimEnd();
@@ -32,9 +34,8 @@ document.getElementById('item').addEventListener("keypress", async function (e) 
 });
 
 document.getElementById('add-btn').addEventListener('click', () => {
-    const editItemsContainer = document.getElementById('addItem')
-    editItemsContainer.style.display = `flex`;
-
+    document.querySelector('#editItems-container').style.filter = 'blur(5px)'
+    document.querySelector('#add-item-wrapper').style.display = 'flex';
 })
 
 document.getElementById('done').addEventListener('click', async () => {

@@ -26,3 +26,10 @@
     height: 80vh;
   }
 }
+
+@keyframes rise-up {
+  0% {
+    translate: 0 20px;
+    opacity: 0.8;
+  }
+}
