@@ -1,3 +1,7 @@
+:root {
+    --background-color: rgb(230, 230, 230);
+  } 
+
 #spin-container {
     height: 100vh;
     display: flex;
@@ -93,4 +97,55 @@ circle::before {
 
 #addItem {
     display: none;
+}
+
+#editItems-container{
+    background: var(--background-color);
+    height: 80vh;
+    padding-block: 2rem;
+    width: 80vw;
+    display: none;
+    /* outline: 1px solid rgb(0, 0, 0); */
+    flex-direction: column;
+    border-radius: 8px;
+    box-shadow: 10px 10px 10px rgba(10, 99, 169, 0.16),
+    -10px -10px 10px rgba(255, 255, 255, 0.7);
+    overflow: scroll;
+    scroll-behavior: smooth;
+}
+
+#current-items div .item-name{    
+    display: inline-block;
+    background: var(--background-color);
+    margin: 5px;
+    padding: 1rem 1rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: rgb(105, 105, 105);
+    border-radius: 16px;
+    box-shadow: 10px 10px 10px rgb(10 99 169 / 16%), -10px -10px 10px rgb(255 255 255 / 70%);
+    text-align: center;
+    width: 15rem;
+}
+
+#current-items div .remove-btn-div{
+    display: inline-block;
+}
+
+#current-items div .remove-btn-div button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(255, 0, 0);
+    opacity: 0.8    ;
+    padding: 0.5rem;
+    border: none;
+     border-radius: 8px;
+    box-shadow: 10px 10px 10px rgba(10, 99, 169, 0.16),
+    -10px -10px 10px rgba(255, 255, 255, 0.7);
+}
+
+#current-items div .remove-btn-div button img{
+    width: 20px;
+    filter: invert(1);
 }

@@ -56,8 +56,9 @@ function renderItemsList() {
     data.forEach((element, index) => {
         currentItems.innerHTML += `
         <div class='spin-item'>
-            <div class='item-name'>${element.label}
-            <button onclick="removeItem(${index})" class="remove-btn">-</button>
+            <div class='item-name'>${element.label}</div>
+            <div class="remove-btn-div">
+                <button onclick="removeItem(${index})" class="remove-btn"><img src="assets/icons/remove-icon.png"></button>
             </div>
         </div>
     `;

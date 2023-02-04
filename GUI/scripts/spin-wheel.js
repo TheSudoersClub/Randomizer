@@ -37,8 +37,8 @@ async function renderSpinWheel() {
             bottom: 0,
             left: 0
         },
-        w = Math.min(window.innerWidth, 450) - padding.left - padding.right;
-    h = Math.min(window.innerHeight, 450) - padding.top - padding.bottom;
+        w = Math.min(window.innerWidth, 370) - padding.left - padding.right;
+    h = Math.min(window.innerHeight, 370) - padding.top - padding.bottom;
     r = Math.min(w, h) / 2,
         rotation = 0,
         oldrotation = 0,
@@ -55,7 +55,10 @@ async function renderSpinWheel() {
         .style({
             // "border": "1px solid black",
             "border-radius": "50%",
-            "padding-left": "4%",
+            // "padding-left": "4%",
+            "box-shadow": "15px 15px 15px rgba(10, 99, 169, 0.16),-15px -15px 15px rgba(255, 255, 255, 0.7)",
+        
+
         });
 
 
@@ -64,7 +67,7 @@ async function renderSpinWheel() {
         .attr("class", "chartholder")
         .attr("transform", "translate(" + (w / 2 + padding.left) + "," + (h / 2 + padding.top) + ")")
         .style({
-            // "transform": "translate(190px,241px)"
+            "transform": "translate(185px,185px)",
             "box-shadow": "1px 1px 20px black",
         })
 
