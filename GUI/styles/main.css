@@ -15,13 +15,13 @@ html {
   scroll-behavior: smooth;
 }
 
-html::-webkit-scrollbar {
+/* html::-webkit-scrollbar {
   width: 0px;
 }
 
 html::-webkit-scrollbar-thumb {
   background: transparent;
-}
+} */
 
 body {
   overflow: hidden;

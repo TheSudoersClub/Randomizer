@@ -5,7 +5,9 @@
 
 document.getElementById('item').addEventListener("keypress", async function (e) {
     if (e.key === "Enter") {
-        const item = document.getElementById('item').value;
+        let item = document.getElementById('item').value;
+        item = item.trimStart();
+        item = item.trimEnd();
 
         if (item.length > 10) {
             console.log("please enter the smaller string")
@@ -15,7 +17,7 @@ document.getElementById('item').addEventListener("keypress", async function (e) 
             }
 
             data = localStorage.getItem('Items') ? JSON.parse(localStorage.getItem('Items')) : [];
-            if (data.some(item => JSON.stringify(item) === JSON.stringify(target))) {
+            if (item.length < 1 || data.some(item => JSON.stringify(item) === JSON.stringify(target))) {
                 console.log('item already added');
             } else {
                 data.push({

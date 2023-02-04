@@ -50,7 +50,7 @@ function p2handleTouchMove(e) {
     if (coordinateChange < 0) {
         return;
     }
-    spinWheelPage.style.display = 'block';
+    spinWheelPage.style.display = 'flex';
     spinWheelPage.style.left = (coordinateChange - screen.width) + 'px';
     tossPage.style.left = coordinateChange + 'px';
 };
