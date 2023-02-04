@@ -143,10 +143,10 @@ circle::before {
   font-weight: 700;
 }
 
-.wheel-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.wheel-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .wheel-container #edit-btn {
@@ -170,17 +170,17 @@ circle::before {
   width: 50px;
 }
 
-.edit-btn-container{
-    /* background: red; */
-    /* width: 70%;
+.edit-btn-container {
+  /* background: red; */
+  /* width: 70%;
     display: flex;
     justify-content: flex-end; */
 
-    transform: translateY(-0.5rem);
+  transform: translateY(-0.5rem);
 }
 
-.spin-controller{
-    transform: translateY(2rem);
+.spin-controller {
+  transform: translateY(2rem);
 }
 
 .spin-controller #spin-btn {
