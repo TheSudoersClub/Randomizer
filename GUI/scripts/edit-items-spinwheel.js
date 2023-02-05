@@ -27,7 +27,6 @@ document.getElementById('item').addEventListener("keypress", async function (e) 
                 });
                 localStorage.setItem('Items', JSON.stringify(data));
                 renderItemsList();
-                scrollToBottom();
             }
         }
     }
@@ -54,10 +53,10 @@ document.getElementById('done').addEventListener('click', async () => {
 
 })
 
-async function renderItemsList() {
+function renderItemsList() {
     const currentItems = document.getElementById('current-items');
     currentItems.innerHTML = '';
-    await data.forEach((element, index) => {
+    data.forEach((element, index) => {
         currentItems.innerHTML += `
         <div class='spin-item'>
             <div class='item-name'>${element.label}</div>
@@ -67,8 +66,6 @@ async function renderItemsList() {
         </div>
     `;
     });
-
-    scrollToBottom();
 };
 
 function removeItem(index) {
@@ -76,7 +73,3 @@ function removeItem(index) {
     localStorage.setItem('Items', JSON.stringify(data));
     renderItemsList();
 };
-
-function scrollToBottom() {
-    document.getElementById('editItems-container').scrollTo(0, document.getElementById('editItems-container').scrollHeight);
-}
