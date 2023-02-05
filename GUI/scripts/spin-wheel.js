@@ -99,10 +99,10 @@ async function renderSpinWheel() {
                 } else if (i % 2 == 0) {
                     return "rgb(240 240 240)"
                 } else {
-                    return "rgb(100 100 100)"
+                    return "rgb(160 160 160)"
                 }
             } else {
-                return i % 2 == 0 ? "rgb(100 100 100)" : "rgb(220 220 220)";
+                return i % 2 == 0 ? "rgb(160 160 160)" : "rgb(220 220 220)";
             }
         })
         .attr("d", function (d) {
