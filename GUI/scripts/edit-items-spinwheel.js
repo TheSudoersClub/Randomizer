@@ -5,14 +5,14 @@
 
 document.getElementById('item').addEventListener("keypress", async function (e) {
     if (e.key === "Enter") {
-        document.querySelector('#editItems-container').style.filter = 'none'
-        document.querySelector('#add-item-wrapper').style.display = 'none';
         let item = document.getElementById('item').value;
         item = item.trimStart();
         item = item.trimEnd();
 
         if (item.length > 10) {
-            console.log("please enter the smaller string")
+            document.querySelector('#item').style.animation = 'shake 1s';
+            document.querySelector('#add-item-input-error').innerText = 'Character limit exceeded (10)';
+            document.querySelector('.add-item-input-error-container').style.display = 'block';
         } else {
             const target = {
                 "label": item
@@ -20,8 +20,12 @@ document.getElementById('item').addEventListener("keypress", async function (e) 
 
             data = localStorage.getItem('Items') ? JSON.parse(localStorage.getItem('Items')) : [];
             if (item.length < 1 || data.some(item => JSON.stringify(item) === JSON.stringify(target))) {
-                console.log('item already added');
+                document.querySelector('#item').style.animation = 'shake 1s';
+                document.querySelector('#add-item-input-error').innerText = 'Duplicate Entry';
+                document.querySelector('.add-item-input-error-container').style.display = 'block';
             } else {
+                document.querySelector('#editItems-container').style.filter = 'none'
+                document.querySelector('#add-item-wrapper').style.display = 'none';
                 data.push({
                     'label': item
                 });

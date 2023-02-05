@@ -33,3 +33,21 @@
     opacity: 0.8;
   }
 }
+
+@keyframes shake {
+  10% {
+    transform: translateX(-1px);
+  }
+
+  20% {
+    transform: translateX(1px);
+  }
+
+  30% {
+    transform: translateX(-1px);
+  }
+
+  40% {
+    transform: translateX(1px);
+  }
+}

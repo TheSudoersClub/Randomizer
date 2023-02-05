@@ -15,13 +15,13 @@ html {
   scroll-behavior: smooth;
 }
 
-/* html::-webkit-scrollbar {
+html::-webkit-scrollbar {
   width: 0px;
 }
 
 html::-webkit-scrollbar-thumb {
   background: transparent;
-} */
+}
 
 body {
   overflow: hidden;
@@ -47,4 +47,15 @@ body {
   left: 100%;
   height: 100vh;
   width: 100vw;
+}
+
+.add-item-input-error-container{
+  margin-top: 12px;
+}
+
+#add-item-input-error{
+  color: rgb(255, 70, 70);
+  font-style: italic;
+  font-weight: 700;
+  font-size: 12px;
 }
