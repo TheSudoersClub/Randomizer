@@ -122,7 +122,7 @@ async function renderSpinWheel() {
         })
         .style({
             "font-weight": "700",
-            "fill": "rgb(0, 0, 0)"
+            "fill": "rgb(50, 50, 50)"
         })
 
     //draw spin circle
