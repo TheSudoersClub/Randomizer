@@ -1,8 +1,3 @@
-// document.getElementById('clear-list').addEventListener('click', () => {
-//     data = localStorage.clear();
-//     renderItemsList();
-// });
-
 document.getElementById('item').addEventListener("keypress", async function (e) {
     if (e.key === "Enter") {
         let item = document.getElementById('item').value;
@@ -31,6 +26,7 @@ document.getElementById('item').addEventListener("keypress", async function (e) 
                 });
                 localStorage.setItem('Items', JSON.stringify(data));
                 renderItemsList();
+                scrollToBottom();
             }
         }
     }
@@ -70,6 +66,7 @@ function renderItemsList() {
         </div>
     `;
     });
+    scrollToBottom();
 };
 
 function removeItem(index) {
@@ -77,3 +74,7 @@ function removeItem(index) {
     localStorage.setItem('Items', JSON.stringify(data));
     renderItemsList();
 };
+
+function scrollToBottom() {
+    document.getElementById('editItems-container').scrollTo(0, document.getElementById('editItems-container').scrollHeight);
+}
