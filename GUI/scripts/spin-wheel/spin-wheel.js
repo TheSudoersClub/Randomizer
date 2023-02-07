@@ -16,8 +16,8 @@ document.getElementById('edit-btn').addEventListener('click', () => {
     const editItemsContainer = document.getElementById('editItems-container')
     editItemsContainer.style.display = `flex`;
 
+    disableSwipe();
     renderItemsList();
-
 })
 
 document.getElementById('spin-btn').addEventListener('click', async () => {

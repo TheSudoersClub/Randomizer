@@ -39,6 +39,7 @@ document.getElementById('add-btn').addEventListener('click', () => {
 
 document.getElementById('done').addEventListener('click', async () => {
 
+    enableSwipe();
     await renderSpinWheel();
 
     const spinContainer = document.getElementById('spin-container')

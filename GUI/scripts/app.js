@@ -72,4 +72,23 @@ function p2handleTouchEnd(e) {
         tossPage.style.left = '100%';
     }
 }
-//}
+
+function disableSwipe() {
+    spinWheelPage.ontouchstart = null;
+    spinWheelPage.ontouchmove = null;
+    spinWheelPage.ontouchend = null;
+
+    tossPage.ontouchstart = null;
+    tossPage.ontouchmove = null;
+    tossPage.ontouchend = null;
+}
+
+function enableSwipe() {
+    spinWheelPage.ontouchstart = p1handleTouchStart;
+    spinWheelPage.ontouchmove = p1handleTouchMove;
+    spinWheelPage.ontouchend = p1handleTouchEnd;
+
+    tossPage.ontouchstart = p2handleTouchStart;
+    tossPage.ontouchmove = p2handleTouchMove;
+    tossPage.ontouchend = p2handleTouchEnd;
+}
