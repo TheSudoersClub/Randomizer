@@ -44,13 +44,8 @@ document.getElementById('done').addEventListener('click', async () => {
     const spinContainer = document.getElementById('spin-container')
     spinContainer.style.display = `flex`;
 
-    const addItemContainer = document.getElementById('addItem')
-    addItemContainer.style.display = `none`;
-
     const editItemsContainer = document.getElementById('editItems-container')
     editItemsContainer.style.display = `none`;
-
-
 })
 
 function renderItemsList() {
