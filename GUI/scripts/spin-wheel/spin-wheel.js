@@ -180,7 +180,7 @@ function spin(d) {
     oldpick.push(picked);
     rotation += 90 - Math.round(ps / 2);
     vis.transition()
-        .duration(5000)
+        .duration(3000)
         .attrTween("transform", rotTween)
         .ease('cubic-out')
         .each("end", function () {
