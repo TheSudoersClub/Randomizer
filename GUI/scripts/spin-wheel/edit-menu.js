@@ -1,5 +1,10 @@
 document.getElementById('item').addEventListener("keypress", async function (e) {
     if (e.key === "Enter") {
+
+        //reset
+        document.querySelector('.add-item-input-error-container').style.display = 'none';
+        document.querySelector('#item').style.animation = 'none';
+
         let item = document.getElementById('item').value;
         item = item.trimStart();
         item = item.trimEnd();
