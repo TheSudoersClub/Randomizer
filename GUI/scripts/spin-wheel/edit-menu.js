@@ -42,6 +42,21 @@ document.getElementById('add-btn').addEventListener('click', () => {
     document.querySelector('#add-item-wrapper').style.display = 'flex';
 })
 
+// hide the input prompt when use clicks on blank area on screen
+let addItemWrapper = document.getElementById("add-item-wrapper");
+let addItem = document.getElementById("addItem");
+
+addItemWrapper.addEventListener("click", function (event) {
+    if (event.target === addItemWrapper) {
+        document.querySelector('#editItems-container').style.filter = ''
+        document.querySelector('#add-item-wrapper').style.display = 'none';
+    }
+});
+
+
+function hideInputDiv() {
+    console.log('even listened')
+}
 document.getElementById('done').addEventListener('click', async () => {
 
     enableSwipe();
