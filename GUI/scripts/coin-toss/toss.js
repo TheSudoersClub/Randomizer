@@ -1,7 +1,7 @@
 let heads = 0, tails = 0;
 let tossButton = document.querySelector('#toss-btn');
 let tossCoin = document.querySelector('.toss__coin-container');
-let tossSfx = new Audio("/GUI/assets/sfx/coin-toss-sfx.mp3");
+let tossSfx = document.getElementById('toss-sfx');
 
 tossButton.addEventListener('click', function () {
     let i = Math.floor(Math.random() * 2)
