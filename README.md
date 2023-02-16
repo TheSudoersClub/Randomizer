@@ -8,7 +8,7 @@ it has a 'Coin Toss' and a 'Spin Wheel' feature where you can add or remove item
 > We know that this app is stupid, but we created it anyway because we often struggle with decision-making and this actually has been quite helpful
 
 ## Installation
-Click on the following link to dowload the apk <br />
+Click on the following link to dowload the APK <br />
 
 [![Download zip](https://custom-icon-badges.herokuapp.com/badge/-Download-blue?style=for-the-badge&logo=download&logoColor=white "Randomizer.apk")](https://github.com/TheSudoersClub/Randomizer/blob/main/GUI/build/apk/Randomizer.apk?raw=true)
 
